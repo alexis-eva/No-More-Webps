@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "No More Webps",
+	"version": "1.0",
+	
+	"description": "Automatically appends &format=original to fandom/wikia image links.",
+	
+	"icons": {
+		"48": "icons/nomore-48.png"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["*://static.wikia.nocookie.net/*/images/*"],
+			"js": ["redirect.js"]
+		}
+	],
+	
+	"permissions": [
+		"tabs"
+	]
+	
+}
